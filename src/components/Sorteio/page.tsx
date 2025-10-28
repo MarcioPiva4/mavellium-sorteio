@@ -191,6 +191,7 @@ export default function Sorteio() {
                                 <input
                                     type="text"
                                     name="nome"
+                                    required
                                     placeholder="Qual seu nome completo?"
                                     className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                                 />
@@ -198,6 +199,7 @@ export default function Sorteio() {
                                 <input
                                     type="text"
                                     name="whatsapp"
+                                    required
                                     placeholder="Digite seu número de WhatsApp"
                                     className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                                 />
