@@ -12,6 +12,10 @@ model Sorteio {
   id        String   @id @default(cuid())
   nome      String
   whatsapp  String
+  email String
+  role String
+  company String
+  objetivo String
   interesse String
   createdAt DateTime @default(now())
 }

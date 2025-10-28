@@ -7,9 +7,9 @@ const prisma = new PrismaClient();
 
 export async function POST(req: Request) {
   try {
-    const { nome, whatsapp, interesse } = await req.json();
+    const { nome, whatsapp, interesse, email, role, company, objetivo } = await req.json();
 
-    if (!nome || !whatsapp || !interesse) {
+    if (!nome || !whatsapp || !interesse || !email || !objetivo) {
       return NextResponse.json(
         { error: "Todos os campos são obrigatórios." },
         { status: 400 }
@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     }
 
     const cadastro = await prisma.sorteio.create({
-      data: { nome, whatsapp, interesse },
+      data: { nome, whatsapp, interesse, email, role, company, objetivo },
     });
 
     return NextResponse.json(cadastro, { status: 201 });

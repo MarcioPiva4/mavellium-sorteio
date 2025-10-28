@@ -1,21 +1,9 @@
 "use client";
 
-import { Cases } from "@/components/Home/cases";
-import { Footer } from "@/components/Home/footer";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
-import { Badge } from "@/components/ui/badge";
-import { Clients } from "@/components/Home/clients";
-import {
-    Card,
-    CardHeader,
-    CardTitle,
-    CardContent,
-    CardDescription,
-    CardFooter,
-} from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+
 
 export default function Sorteio() {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
@@ -30,7 +18,7 @@ export default function Sorteio() {
             <header className="sticky top-0 z-50 w-full border-b border-border flex justify-center bg-white px-10">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-8">
-                        <a href="/" className="flex items-center">
+                        <Link href="/" className="flex items-center">
                             <img
                                 src="/logo-mavellium.svg"
                                 alt="Mavellium"
@@ -38,7 +26,7 @@ export default function Sorteio() {
                                 height={40}
                                 className="object-contain"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="hidden md:flex">
@@ -197,6 +185,14 @@ export default function Sorteio() {
                                 />
 
                                 <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="Qual seu e-mail?"
+                                    className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
+                                />
+
+                                <input
                                     type="text"
                                     name="whatsapp"
                                     required
@@ -209,19 +205,46 @@ export default function Sorteio() {
                                         name="interesse"
                                         className="w-full px-4 py-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all appearance-none pr-12 custom-select"
                                         defaultValue=""
+                                        required
                                     >
                                         <option value="" disabled>
-                                            Como você se conecta com o mundo digital?
+                                            Estou na feira como:
                                         </option>
-                                        <option value="landing">Landing Page</option>
-                                        <option value="site">Site Institucional</option>
-                                        <option value="loja">Loja Virtual</option>
+                                        <option value="Empresário / Sócio">Empresário / Sócio </option>
+                                        <option value="Funcionário de uma empresa (Marketing, T.I, Compras, etc...)">Funcionário de uma empresa (Marketing, T.I, Compras, etc...)</option>
+                                        <option value="Estudante">Estudante</option>
+                                        <option value="Outro">Outro</option>
                                     </select>
 
                                     <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
                                         <Icon icon="solar:alt-arrow-down-line-duotone" className="w-6 h-6 text-white" />
                                     </span>
                                 </div>
+
+                                <div className="relative w-full">
+                                    <select
+                                        name="objetivo"
+                                        className="w-full px-4 py-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all appearance-none pr-12 custom-select"
+                                        defaultValue=""
+                                        required
+                                    >
+                                        <option value="" disabled>
+                                            Qual seu principal objetivo:
+                                        </option>
+                                        <option value="Preciso de uma Landing Page ou Site">Preciso de uma Landing Page ou Site</option>
+                                        <option value="Preciso de um Software ou Sistema Personalizado">Preciso de um Software ou Sistema Personalizado</option>
+                                        <option value="Quero concorrer ao sorteio / Apenas conhecendo">Quero concorrer ao sorteio / Apenas conhecendo</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                    <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+                                        <Icon icon="solar:alt-arrow-down-line-duotone" className="w-6 h-6 text-white" />
+                                    </span>
+                                </div>
+
+                                <input className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all" type="text" name="company" placeholder="Digite o nome da empresa" />
+
+                                <input className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all" type="text" name="role" placeholder="Digite o seu cargo" />
+
                                 <div className="flex flex-col sm:flex-row gap-4 w-full">
                                     <button
                                         type="submit"
