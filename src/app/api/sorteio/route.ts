@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
+export const runtime = "nodejs";
+
 export async function POST(req: Request) {
   try {
     const { nome, whatsapp, interesse } = await req.json();
