@@ -212,7 +212,7 @@ export default function Sorteio() {
                   type="text"
                   name="nome"
                   required
-                  placeholder="Qual seu nome completo?"
+                  placeholder="Qual seu nome completo? *"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                 />
 
@@ -220,7 +220,7 @@ export default function Sorteio() {
                   type="email"
                   name="email"
                   required
-                  placeholder="Qual seu e-mail?"
+                  placeholder="Qual seu e-mail? *"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                 />
 
@@ -228,7 +228,7 @@ export default function Sorteio() {
                   type="text"
                   name="whatsapp"
                   required
-                  placeholder="Digite seu número de WhatsApp"
+                  placeholder="Digite seu número de WhatsApp *"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/20 focus:outline-none focus:ring-2 focus:ring-[#04A15E] transition-all"
                 />
 
@@ -239,7 +239,7 @@ export default function Sorteio() {
                     defaultValue=""
                     required>
                     <option value="" disabled>
-                      Estou na feira como:
+                      Estou na feira como *:
                     </option>
                     <option value="Empresário / Sócio">
                       Empresário / Sócio{" "}
@@ -267,7 +267,7 @@ export default function Sorteio() {
                     defaultValue=""
                     required>
                     <option value="" disabled>
-                      Qual seu principal objetivo:
+                      Qual seu principal objetivo: *
                     </option>
                     <option value="Preciso de uma Landing Page ou Site">
                       Preciso de uma Landing Page ou Site
