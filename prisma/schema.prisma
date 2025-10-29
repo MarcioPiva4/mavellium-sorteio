@@ -8,14 +8,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Sorteio {
-  id        String   @id @default(cuid())
+model sorteio {
+  id        String   @id
   nome      String
   whatsapp  String
-  email String
-  role String
-  company String
-  objetivo String
   interesse String
   createdAt DateTime @default(now())
+  company   String
+  email     String
+  objetivo  String
+  role      String
 }
