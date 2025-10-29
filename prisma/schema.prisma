@@ -9,13 +9,13 @@ datasource db {
 }
 
 model sorteio {
-  id        String   @id
+  id        Int  @id @default(autoincrement())
   nome      String
   whatsapp  String
   interesse String
   createdAt DateTime @default(now())
-  company   String
+  company   String?
   email     String
   objetivo  String
-  role      String
+  role      String?
 }
