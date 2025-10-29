@@ -239,7 +239,7 @@ export default function Sorteio() {
                     defaultValue=""
                     required>
                     <option value="" disabled>
-                      Estou na feira como *:
+                      Estou na feira como: *
                     </option>
                     <option value="Empresário / Sócio">
                       Empresário / Sócio{" "}
